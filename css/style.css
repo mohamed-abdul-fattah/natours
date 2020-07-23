@@ -4,19 +4,25 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 */
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
 }
 
 .header {
@@ -35,12 +41,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -54,22 +60,23 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 30px;
+    letter-spacing: 3rem;
     animation: moveInLeft 1s;
 }
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 19.5px;
+    letter-spacing: 1.95rem;
     animation: moveInRight 1s;
 }
 
@@ -115,21 +122,21 @@ body {
 .btn {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
     transition: all 0.2s;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: relative;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .btn::after {
@@ -138,7 +145,7 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
-    border-radius: 100px;
+    border-radius: 10rem;
     top: 0;
     left: 0;
     z-index: -1;
