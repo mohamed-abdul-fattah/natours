@@ -1,3 +1,5 @@
 1. Why we use <header> element?
 2. What is box-sizing CSS?
 3. Why we use the global selector while we can use inheritence with body?
+4. What are the differences between display options?
+5. How does clear property fixes float?
