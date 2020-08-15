@@ -12,6 +12,7 @@
         top: 6rem;
         right: 6rem;
         z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color: $color-black, $alpha: .1);
     }
 
     &__bg {
@@ -23,8 +24,7 @@
         right: 6.5rem;
         z-index: 1000;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
-
-        transform: scale(80);
+        transition: transform .8s cubic-bezier(0.7, 0, 0.84, 0);
     }
 
     &__nav {
@@ -32,8 +32,12 @@
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: left;
         z-index: 1500;
+        transition: all .9s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        opacity: 0;
+        // visibility: hidden;
+        width: 0;
     }
 
     &__list {
@@ -74,5 +78,15 @@
             color: $color-primary;
             transform: translateX(1rem);
         }
+    }
+
+    &__checkbox:checked ~ &__bg {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        // visibility: visible;
+        width: 100%;
     }
 }
